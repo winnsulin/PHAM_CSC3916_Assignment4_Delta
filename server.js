@@ -42,6 +42,10 @@ function getJSONObjectForMovieRequirement(req) {
     return json;
 }
 
+app.get('/', (req, res) => {
+    res.send('PHAM_CSC3916_Assignment4 Render API is live!');
+});
+
 router.post('/signup', function(req, res) {
     if (!req.body.username || !req.body.password) {
         res.json({success: false, msg: 'Please include both username and password to signup.'})
